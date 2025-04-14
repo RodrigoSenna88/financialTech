@@ -1,10 +1,18 @@
 package Usuarios;
 
+import jakarta.annotation.Nonnull;
+import jakarta.persistence.Entity;
+
+@Entity
 public class Cliente {
 
+    @Nonnull
     public String nomeCompleto;
+    @Nonnull
     public String email;
+    @Nonnull
     public String senha;
+    @Nonnull
     public Integer cpf;
 
     public Cliente(String nomeCompleto, String email, String senha, Integer cpf) {

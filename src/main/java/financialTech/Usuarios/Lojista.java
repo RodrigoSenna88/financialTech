@@ -1,10 +1,17 @@
 package Usuarios;
 
-public class Lojista {
+import jakarta.annotation.Nonnull;
+import jakarta.persistence.Entity;
 
+@Entity
+public class Lojista {
+    @Nonnull
     public String nomeCompleto;
+    @Nonnull
     public String email;
+    @Nonnull
     public String senha;
+    @Nonnull
     public Integer cnpj;
 
     public Lojista(String nomeCompleto, String email, String senha, Integer cnpj) {
