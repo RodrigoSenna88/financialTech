@@ -19,15 +19,17 @@ public class Cliente {
     @Nonnull
     public String senha;
     @Nonnull
-    public Integer cpf;
+    public Long cpf;
 
-    public Cliente(String nomeCompleto, String email, String senha, Integer cpf) {
+    public Cliente(String nomeCompleto, String email, String senha, Long cpf) {
         this.nomeCompleto = nomeCompleto;
         this.email = email;
         this.senha = senha;
         this.cpf = cpf;
     }
 
+    public Cliente() {
+    }
 
     public Long getId() {
         return id;
@@ -61,11 +63,11 @@ public class Cliente {
         this.senha = senha;
     }
 
-    public Integer getCpf() {
+    public Long getCpf() {
         return cpf;
     }
 
-    public void setCpf(Integer cpf) {
+    public void setCpf(Long cpf) {
         this.cpf = cpf;
     }
 }

@@ -19,16 +19,17 @@ public class Lojista {
     @Nonnull
     public String senha;
     @Nonnull
-    public Integer cnpj;
+    public Long cnpj;
 
-    public Lojista(String nomeCompleto, String email, String senha, Integer cnpj) {
+    public Lojista(String nomeCompleto, String email, String senha, Long cnpj) {
         this.nomeCompleto = nomeCompleto;
         this.email = email;
         this.senha = senha;
         this.cnpj = cnpj;
     }
 
-
+    public Lojista() {
+    }
     public Long getId() {
         return id;
     }
@@ -61,11 +62,11 @@ public class Lojista {
         this.senha = senha;
     }
 
-    public Integer getCnpj() {
+    public Long getCnpj() {
         return cnpj;
     }
 
-    public void setCnpj(Integer cnpj) {
+    public void setCnpj(Long cnpj) {
         this.cnpj = cnpj;
     }
 }
