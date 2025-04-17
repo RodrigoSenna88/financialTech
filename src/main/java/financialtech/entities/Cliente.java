@@ -1,10 +1,17 @@
-package Usuarios;
+package financialtech.entities;
 
 import jakarta.annotation.Nonnull;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Entity
-public class Lojista {
+public class Cliente {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     @Nonnull
     public String nomeCompleto;
     @Nonnull
@@ -12,13 +19,22 @@ public class Lojista {
     @Nonnull
     public String senha;
     @Nonnull
-    public Integer cnpj;
+    public Integer cpf;
 
-    public Lojista(String nomeCompleto, String email, String senha, Integer cnpj) {
+    public Cliente(String nomeCompleto, String email, String senha, Integer cpf) {
         this.nomeCompleto = nomeCompleto;
         this.email = email;
         this.senha = senha;
-        this.cnpj = cnpj;
+        this.cpf = cpf;
+    }
+
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getNomeCompleto() {
@@ -45,11 +61,11 @@ public class Lojista {
         this.senha = senha;
     }
 
-    public Integer getCnpj() {
-        return cnpj;
+    public Integer getCpf() {
+        return cpf;
     }
 
-    public void setCnpj(Integer cnpj) {
-        this.cnpj = cnpj;
+    public void setCpf(Integer cpf) {
+        this.cpf = cpf;
     }
 }

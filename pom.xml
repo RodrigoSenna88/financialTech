@@ -11,7 +11,7 @@
 	<groupId>com.example</groupId>
 	<artifactId>financialTech</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>financialTech</name>
+	<name>financialtech</name>
 	<description>Projeto de uma api de fintech</description>
 	<url/>
 	<licenses>

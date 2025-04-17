@@ -1,6 +1,7 @@
-package Services;
+package financialtech.services;
 
-import Usuarios.Lojista;
+
+import financialtech.entities.Lojista;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
