@@ -9,6 +9,7 @@ import jakarta.persistence.Id;
 @Entity
 public class Cliente {
 
+    private static long idCounter = 1;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -29,6 +30,7 @@ public class Cliente {
     }
 
     public Cliente() {
+        this.id = idCounter++;
     }
 
     public Long getId() {
@@ -36,7 +38,7 @@ public class Cliente {
     }
 
     public void setId(Long id) {
-        this.id = id;
+
     }
 
     public String getNomeCompleto() {

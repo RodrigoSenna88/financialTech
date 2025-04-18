@@ -1,8 +1,7 @@
 package financialtech.controllers;
 
-
-import financialtech.entities.Cliente;
-import financialtech.services.ClienteService;
+import financialtech.entities.Lojista;
+import financialtech.services.LojistaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -10,15 +9,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/clientes")
-public class ClienteController {
+@RequestMapping("/lojista")
+public class LojistaController {
 
     @Autowired
-    private ClienteService clienteService;
+    private LojistaService lojistaService;
 
     @PostMapping("/create")
-    public Cliente criarCliente(@RequestBody Cliente cliente) {
-
-        return clienteService.createCliente(cliente);
+    public Lojista createLojista(@RequestBody Lojista lojista) {
+        return lojistaService.createLojista(lojista);
     }
 }
